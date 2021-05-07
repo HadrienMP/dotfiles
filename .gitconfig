@@ -13,3 +13,6 @@
     cp=cherry-pick
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    hide = update-index --assume-unchanged
+    unhide = update-index --no-assume-unchanged
+    show-hidden = !git ls-files -v | grep '^h' | cut -c3
