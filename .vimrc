@@ -14,6 +14,8 @@ set nu
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
