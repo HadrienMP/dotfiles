@@ -1,6 +1,6 @@
 [user]
 	name = hadrienmp
-	email = public@hadrienmp.fr
+	email = github@hadrienmp.fr
 [core]
 	autocrlf = input
 [alias]
@@ -16,3 +16,7 @@
     hide = update-index --assume-unchanged
     unhide = update-index --no-assume-unchanged
     show-hidden = !git ls-files -v | grep '^h' | cut -c3
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
