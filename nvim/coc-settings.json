@@ -1,0 +1,20 @@
+{
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": [
+        "elm"
+      ],
+      "rootPatterns": [
+        "elm.json"
+      ],
+      "initializationOptions": {
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test-rs",
+        "elmAnalyseTrigger": "change"
+      }
+    }
+  },
+  "codeLens.enable": true
+}
