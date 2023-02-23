@@ -31,6 +31,7 @@
     nodejs-16_x
     #nodePackages.npm
     #nodePackages.yarn
+    lazygit
   ];
 
   home.shellAliases = {
