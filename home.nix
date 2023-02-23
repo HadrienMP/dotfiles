@@ -32,6 +32,7 @@
     #nodePackages.npm
     #nodePackages.yarn
     lazygit
+    tree-sitter
   ];
 
   home.shellAliases = {
@@ -167,6 +168,10 @@
       set -g @continuum-restore 'on'
       set -g @continuum-boot 'on'
       set -g status-right 'Continuum status: #{continuum_status}'
+
+      set-option -sg escape-time 10
+      set-option -g default-terminal "screen-256color"
+      set-option -sa terminal-overrides ',XXX:RGB'
     '';
   };
 
