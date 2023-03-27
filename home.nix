@@ -26,9 +26,9 @@
     fzf
     docker
     # postman
-    # ngrok
+    ngrok
     hugo
-    nodejs-16_x
+    nodejs
     #nodePackages.npm
     #nodePackages.yarn
     lazygit
