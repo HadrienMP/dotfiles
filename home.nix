@@ -26,7 +26,7 @@
     fzf
     docker
     # postman
-    ngrok
+    # ngrok
     hugo
     nodejs
     #nodePackages.npm
