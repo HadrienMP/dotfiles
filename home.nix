@@ -213,6 +213,7 @@
       direnv hook fish | source
       fish_add_path $HOME"/.yarn/bin"
       fish_add_path $HOME"/.npm-packages/bin"
+      fish_add_path $HOME"/.local/bin"
     '';
     shellAliases = {
       rm = "rm -i";
