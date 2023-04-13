@@ -42,6 +42,27 @@
   };
 
   # ---------------------------------------
+  # Lazygit
+  # ---------------------------------------
+  programs.lazygit = {
+    enable = true;
+    settings =
+      {
+        customCommands = [
+
+          {
+            key = "Z";
+            command = "git cz";
+            context = "files";
+            loadingText = "opening commitizen commit tool";
+            subprocess = true;
+          }
+        ];
+      };
+  };
+
+
+  # ---------------------------------------
   # NVIM
   # ---------------------------------------
   programs.neovim = {
@@ -55,16 +76,16 @@
     extraConfig = lib.fileContents nvim/init.lua;
   };
   xdg.configFile.nvim = {
-      source = ./nvim;
-      recursive = true;
-    };
+    source = ./nvim;
+    recursive = true;
+  };
 
   # ---------------------------------------
   # VIM
   # ---------------------------------------
   programs.vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [ 
+    plugins = with pkgs.vimPlugins; [
       vim-airline
       vim-nix
       nerdtree
