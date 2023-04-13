@@ -33,6 +33,8 @@
     #nodePackages.yarn
     lazygit
     tree-sitter
+    ripgrep
+    fd
   ];
 
   home.shellAliases = {
