@@ -1,5 +1,5 @@
 return {
-  {
-    "leafOfTree/vim-svelte-plugin",
-  },
+  { "othree/html5.vim" },
+  { "pangloss/vim-javascript" },
+  { "evanleck/vim-svelte" },
 }
