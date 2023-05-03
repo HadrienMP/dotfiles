@@ -3,7 +3,8 @@
 -- Add any additional options here
 -- vim.o.spelllang = "fr_fr,en_us"
 -- vim.o.spell = true
+--
+
 vim.o.tabstop = 4
-vim.o.expandtab = true
-vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
+vim.o.smarttab = true
