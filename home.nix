@@ -31,6 +31,7 @@
     nodejs
     #nodePackages.npm
     #nodePackages.yarn
+    mob
     # ----------------------
     # For NVIM
     # ----------------------
