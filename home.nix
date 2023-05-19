@@ -26,11 +26,9 @@
     fzf
     docker
     # postman
-    # ngrok
+    ngrok
     hugo
     nodejs
-    #nodePackages.npm
-    #nodePackages.yarn
     mob
     # ----------------------
     # For NVIM
@@ -42,6 +40,8 @@
     elmPackages.elm-language-server
     nodePackages.typescript-language-server
   ];
+
+  xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.shellAliases = {
     ll = "lsd -alh";

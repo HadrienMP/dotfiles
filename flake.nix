@@ -10,25 +10,20 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }:
-    let
-      overlay-unstable = final: prev: {
-        unstable = import nixpkgs {
-          config.allowUnfree = true;
-        };
-      };
-    in
     {
-
-      defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-      defaultPackage.aarch64-darwin = home-manager.defaultPackage.x86_64-darwin;
-
       homeConfigurations = {
         "ash" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+          pkgs = import nixpkgs {
+            config.allowUnfree = true;
+            system = "aarch64-darwin";
+          };
           modules = [ ./home.nix ];
         };
         "h" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = import nixpkgs {
+            config.allowUnfree = true;
+            system = "x86_64-linux";
+          };
           modules = [ ./home.nix ];
         };
       };

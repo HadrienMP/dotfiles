@@ -1,3 +1,5 @@
+USER = $(shell whoami)
+
 install:
-	nix run . switch -- -b backup --flake .
+	home-manager switch --flake ".#${USER}"
 	 
