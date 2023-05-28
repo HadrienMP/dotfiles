@@ -30,6 +30,7 @@
     hugo
     nodejs
     mob
+    dbeaver
     # ----------------------
     # For NVIM
     # ----------------------
@@ -39,12 +40,14 @@
     fd
     elmPackages.elm-language-server
     nodePackages.typescript-language-server
+    gnused
   ];
 
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.shellAliases = {
     ll = "lsd -alh";
+    gsed = "sed";
   };
 
   # ---------------------------------------
