@@ -5,8 +5,10 @@
 -- vim.o.spell = true
 --
 
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 vim.o.smarttab = true
 vim.o.relativenumber = false
 vim.o.number = true
+
+vim.g.autoclose_on = 0
