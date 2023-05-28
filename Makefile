@@ -1,5 +1,8 @@
 USER = $(shell whoami)
 
 install:
-	home-manager switch --flake ".#${USER}"
+	git add . && home-manager switch --flake ".#${USER}"
+
+update:
+	nix flake update
 	 
