@@ -22,7 +22,6 @@
   home.packages = with pkgs; [
     lsd
     oh-my-fish
-    tmate
     fzf
     docker
     gcc
