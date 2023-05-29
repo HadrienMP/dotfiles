@@ -73,7 +73,7 @@
           }
         ];
       };
-    };
+  };
 
 
   # ---------------------------------------
@@ -114,6 +114,13 @@
       set-option -sg escape-time 10
       set-option -g default-terminal "screen-256color"
       set-option -sa terminal-overrides ',XXX:RGB'
+    '';
+  };
+
+  programs.tmate = {
+    enable = true;
+    extraConfig = ''
+      if-shell "test -f ~/.tmux-status.conf" "source ~/.tmux-status.conf"
     '';
   };
 
@@ -170,8 +177,8 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-    Host *
-      IdentityAgent ~/.1password/agent.sock
+      Host *
+        IdentityAgent ~/.1password/agent.sock
     '';
   };
 
