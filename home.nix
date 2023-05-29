@@ -33,7 +33,7 @@
     dbeaver
     _1password-gui
     _1password
-    terminus-nerdfont
+    (pkgs.nerdfonts.override { fonts = ["Hack"]; })
 
     # ----------------------
     # For NVIM
