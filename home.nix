@@ -33,7 +33,7 @@
     dbeaver
     _1password-gui
     _1password
-    (pkgs.nerdfonts.override { fonts = ["Hack"]; })
+    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
 
     # ----------------------
     # For NVIM
@@ -190,6 +190,14 @@
           sha256 = "1hrl22dd0aaszdanhvddvqz3aq40jp9zi2zn0v1hjnf7fx4bgpma";
         };
       }
+        name = "agnoster";
+        src = pkgs.fetchFromGitHub {
+          owner = "hauleth";
+          repo = "agnoster"
+        }
+      }
+
+
     ];
     shellInit = ''
       # Set syntax highlighting colours; var names defined here:
