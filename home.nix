@@ -34,6 +34,7 @@
     _1password-gui
     _1password
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+    xclip
 
     # ----------------------
     # For NVIM
@@ -190,14 +191,15 @@
           sha256 = "1hrl22dd0aaszdanhvddvqz3aq40jp9zi2zn0v1hjnf7fx4bgpma";
         };
       }
+      {
         name = "agnoster";
         src = pkgs.fetchFromGitHub {
           owner = "hauleth";
-          repo = "agnoster"
-        }
+          repo = "agnoster";
+          rev = "7312ebb59769d5ff503fd06b174103f0f7ba368a";
+          sha256 = "0/FgJlQULIXKhQIt3z3ugAGubgMlwFZa/cjGjiq7BcA=";
+        };
       }
-
-
     ];
     shellInit = ''
       # Set syntax highlighting colours; var names defined here:
@@ -208,6 +210,7 @@
       fish_add_path $HOME"/.yarn/bin"
       fish_add_path $HOME"/.npm-packages/bin"
       fish_add_path $HOME"/.local/bin"
+      agnoster powerline
     '';
     shellAliases = {
       rm = "rm -i";
