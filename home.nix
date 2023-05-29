@@ -25,12 +25,18 @@
     tmate
     fzf
     docker
+    gcc
     # postman
     ngrok
     hugo
     nodejs
     mob
     dbeaver
+    fira-code
+    fira-code-symbols
+    _1password-gui
+    _1password
+
     # ----------------------
     # For NVIM
     # ----------------------
@@ -47,7 +53,6 @@
 
   home.shellAliases = {
     ll = "lsd -alh";
-    gsed = "sed";
   };
 
   # ---------------------------------------
@@ -68,7 +73,7 @@
           }
         ];
       };
-  };
+    };
 
 
   # ---------------------------------------
@@ -101,7 +106,7 @@
     extraConfig = ''
       # Mouse works as expected
       set-option -g mouse on
-      
+
       set -g @continuum-restore 'on'
       set -g @continuum-boot 'on'
       set -g status-right 'Continuum status: #{continuum_status}'
@@ -122,6 +127,53 @@
     };
   };
 
+
+  # ---------------------------------------
+  # Git
+  # ---------------------------------------
+  programs.git = {
+    enable = true;
+    userName = "Hadrien MENS-PELLEN";
+    userEmail = "github@hadrienmp.fr";
+    aliases = {
+      co = "checkout";
+      s = "status";
+      ci = "commit";
+      cim = "commit -m";
+      ciam = "commit -am";
+      a = "add";
+      p = "pull";
+      push-please = "push --force-with-lease";
+      cp = "cherry-pick";
+      ls = ''log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'';
+      ll = ''log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat'';
+      hide = "update-index --assume-unchanged";
+      unhide = "update-index --no-assume-unchanged";
+      show-hidden = "!git ls-files -v | grep '^h' | cut -c3";
+    };
+    extraConfig = {
+      core = {
+        autocrlf = "input";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      pull = {
+        rebase = true;
+      };
+    };
+  };
+
+  # ---------------------------------------
+  # Ssh
+  # ---------------------------------------
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+    Host *
+      IdentityAgent ~/.1password/agent.sock
+    '';
+  };
 
   # ---------------------------------------
   # Fish
