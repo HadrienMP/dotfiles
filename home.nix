@@ -133,7 +133,7 @@
   # ---------------------------------------
   programs.git = {
     enable = true;
-    userName = "Hadrien MENS-PELLEN";
+    userName = "hadrienmp";
     userEmail = "github@hadrienmp.fr";
     aliases = {
       co = "checkout";
