@@ -31,10 +31,9 @@
     nodejs
     mob
     dbeaver
-    fira-code
-    fira-code-symbols
     _1password-gui
     _1password
+    terminus-nerdfont
 
     # ----------------------
     # For NVIM
@@ -48,6 +47,8 @@
     gnused
   ];
 
+  fonts.fontconfig.enable = true;
+
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.shellAliases = {
@@ -59,20 +60,7 @@
   # ---------------------------------------
   programs.lazygit = {
     enable = true;
-    settings =
-      {
-        customCommands = [
-
-          {
-            key = "Z";
-            command = "git cz";
-            context = "files";
-            loadingText = "opening commitizen commit tool";
-            subprocess = true;
-          }
-        ];
-      };
-  };
+    };
 
 
   # ---------------------------------------
