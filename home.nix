@@ -90,6 +90,7 @@
     plugins = with pkgs.tmuxPlugins; [
       resurrect
       continuum
+      power-theme
     ];
     extraConfig = ''
       # Mouse works as expected
@@ -102,6 +103,8 @@
       set-option -sg escape-time 10
       set-option -g default-terminal "screen-256color"
       set-option -sa terminal-overrides ',XXX:RGB'
+
+      set -g @tmux_power_theme 'violet'
     '';
   };
 
