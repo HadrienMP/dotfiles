@@ -36,6 +36,7 @@
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
     xclip
     neofetch
+    nodePackages.degit
 
     # ----------------------
     # For NVIM
