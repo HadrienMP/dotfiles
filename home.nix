@@ -35,6 +35,7 @@
     _1password
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
     xclip
+    neofetch
 
     # ----------------------
     # For NVIM
