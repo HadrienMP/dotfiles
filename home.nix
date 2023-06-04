@@ -26,6 +26,7 @@
     docker
     gcc
     # postman
+    vscode
     ngrok
     hugo
     nodejs
