@@ -95,6 +95,7 @@
       gnumake
       git
       wget
+      unzip
     #  thunderbird
     ];
   };

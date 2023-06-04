@@ -5,4 +5,8 @@ install:
 
 update:
 	nix flake update
+
+install-nixos:
+	sudo cp nixos/configuration.nix /etc/nixos/configuration.nix
+	sudo nixos-rebuild switch
 	 
