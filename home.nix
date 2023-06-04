@@ -48,6 +48,7 @@
     elmPackages.elm-language-server
     nodePackages.typescript-language-server
     gnused
+    lua54Packages.jsregexp
   ];
 
   fonts.fontconfig.enable = true;
@@ -173,8 +174,8 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-    Host *
-      IdentityAgent ~/.1password/agent.sock
+      Host *
+        IdentityAgent ~/.1password/agent.sock
     '';
   };
 
