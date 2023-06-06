@@ -34,7 +34,7 @@
     dbeaver
     _1password-gui
     _1password
-    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
     xclip
     neofetch
     nodePackages.degit
@@ -188,17 +188,7 @@
   programs.kitty = {
     enable = true;
     theme = "Dracula";
-  };
-
-  programs.alacritty = {
-    enable = true;
-    settings = ''
-      {
-        font = {
-          normal = "Hack Nerd Font"
-        }
-      }
-    '';
+    font = { name = "FiraCode Nerd Font"; };
   };
 
 
