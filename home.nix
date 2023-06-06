@@ -183,12 +183,24 @@
 
 
   # ---------------------------------------
-  # Fish
+  # Terminals
   # ---------------------------------------
   programs.kitty = {
     enable = true;
     theme = "Dracula";
   };
+
+  programs.alacritty = {
+    enable = true;
+    settings = ''
+      {
+        font = {
+          normal = "Hack Nerd Font"
+        }
+      }
+    '';
+  };
+
 
   # ---------------------------------------
   # Fish
