@@ -94,7 +94,11 @@
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = power-theme;
-        extraConfig = "set -g @tmux_power_theme 'sky'";
+        extraConfig = ''
+          set -g @tmux_power_theme '#80abf6' 
+          set -g @tmux_power_left_arrow_icon ''
+          set -g @tmux_power_right_arrow_icon ''
+        '';
       }
       {
         plugin = vim-tmux-navigator;
@@ -132,6 +136,7 @@
   programs.tmate = {
     enable = true;
     extraConfig = ''
+      source-file ~/.config/tmux/tmux.conf
     '';
   };
 
@@ -243,6 +248,7 @@
       fish_add_path $HOME"/.npm-packages/bin"
       fish_add_path $HOME"/.local/bin"
       agnoster powerline
+      set -U AGNOSTER_SEGMENT_SEPARATOR '' ''
     '';
     shellAliases = {
       rm = "rm -i";
@@ -253,3 +259,4 @@
     };
   };
 }
+
