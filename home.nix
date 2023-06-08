@@ -94,7 +94,7 @@
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = power-theme;
-        extraConfig = "set -g @tmux_power_theme 'violet'";
+        extraConfig = "set -g @tmux_power_theme 'sky'";
       }
       {
         plugin = vim-tmux-navigator;
