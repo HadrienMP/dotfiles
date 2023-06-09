@@ -28,7 +28,7 @@
     ngrok
     hugo
     nodejs
-    mob
+    mob # Mob.sh
     dbeaver
     _1password-gui
     _1password
@@ -36,6 +36,7 @@
     xclip
     neofetch
     nodePackages.degit
+    nodePackages.gitmoji-cli
 
     # ----------------------
     # For NVIM
@@ -62,6 +63,15 @@
   # ---------------------------------------
   programs.lazygit = {
     enable = true;
+    settings = {
+      customCommands = [
+        {
+          key = "!";
+          context = "global";
+          command = "gitmoji -c";
+        }
+      ];
+    };
   };
 
 
@@ -257,4 +267,7 @@
     };
   };
 }
+
+
+
 
