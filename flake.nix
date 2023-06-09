@@ -17,14 +17,14 @@
             config.allowUnfree = true;
             system = "aarch64-darwin";
           };
-          modules = [ ./home.nix ];
+          modules = [ ./home.nix ./mac-home.nix ];
         };
         "h" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             config.allowUnfree = true;
             system = "x86_64-linux";
           };
-          modules = [ ./home.nix ];
+          modules = [ ./home.nix ./linux-home.nix ];
         };
       };
     };

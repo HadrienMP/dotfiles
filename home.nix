@@ -3,8 +3,6 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "h";
-  home.homeDirectory = "/home/h";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -42,7 +40,6 @@
     # ----------------------
     # For NVIM
     # ----------------------
-    lazygit
     tree-sitter
     ripgrep
     fd
