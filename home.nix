@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "ash";
-  home.homeDirectory = "/Users/ash";
+  home.username = "h";
+  home.homeDirectory = "/home/h";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -177,6 +177,7 @@
     extraConfig = {
       core = {
         autocrlf = "input";
+        editor = "vim";
       };
       init = {
         defaultBranch = "main";
