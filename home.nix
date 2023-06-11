@@ -256,7 +256,7 @@
       fish_add_path $HOME"/.npm-packages/bin"
       fish_add_path $HOME"/.local/bin"
       agnoster powerline
-      set -U AGNOSTER_SEGMENT_SEPARATOR '' ''
+      set -U AGNOSTER_SEGMENT_SEPARATOR '' '  '
     '';
     shellAliases = {
       rm = "rm -i";
