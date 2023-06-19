@@ -39,6 +39,7 @@
     nodePackages.gitmoji-cli
     cachix
     fd
+    autojump
 
     # ----------------------
     # For NVIM
