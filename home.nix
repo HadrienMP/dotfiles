@@ -42,6 +42,12 @@
     autojump
 
     # ----------------------
+    # For Spacemacs
+    # ----------------------
+    emacs
+    gnutar
+
+    # ----------------------
     # For NVIM
     # ----------------------
     tree-sitter
@@ -220,6 +226,19 @@
     font = { name = "FiraCode Nerd Font"; };
   };
 
+
+  # ---------------------------------------
+  # Spacemacs
+  # ---------------------------------------
+  home.file.".emacs.d" = {
+    recursive = true;
+    source = pkgs.fetchFromGitHub {
+      owner = "syl20bnr";
+      repo = "spacemacs";
+      rev = "26629bf3a5b8d0228be23827bb86dbd8d8087378";
+      sha256 = "sha256-SYYbUHomnYE99tdmfxA/3xVhb/F5AD13bTbcxpesO2s=";
+    };
+  };
 
   # ---------------------------------------
   # Fish
