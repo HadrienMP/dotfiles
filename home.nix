@@ -38,6 +38,7 @@
     nodePackages.degit
     nodePackages.gitmoji-cli
     cachix
+    fd
 
     # ----------------------
     # For NVIM
