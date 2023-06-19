@@ -37,6 +37,7 @@
     neofetch
     nodePackages.degit
     nodePackages.gitmoji-cli
+    cachix
 
     # ----------------------
     # For NVIM
