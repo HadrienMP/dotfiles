@@ -7,6 +7,6 @@
   home.packages = with pkgs; [
     gimp
     inkscape
-    peek
+    kooha
   ];
 }
