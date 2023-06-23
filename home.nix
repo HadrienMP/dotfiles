@@ -40,6 +40,7 @@
     cachix
     fd
     autojump
+    ffmpeg_6
 
     # ----------------------
     # For Spacemacs
