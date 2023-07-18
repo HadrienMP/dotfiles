@@ -23,7 +23,7 @@
     fzf
     docker
     gcc
-    # postman
+    postman
     vscode
     ngrok
     hugo
