@@ -145,6 +145,7 @@
     keyMode = "vi";
     mouse = true;
     sensibleOnTop = false;
+    escapeTime = 10;
   };
 
   # ---------------------------------------
