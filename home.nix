@@ -153,9 +153,6 @@
   # ---------------------------------------
   programs.tmate = {
     enable = true;
-    extraConfig = ''
-      source-file ~/.config/tmux/tmux.conf
-    '';
   };
 
   # ---------------------------------------
