@@ -8,5 +8,6 @@
     gimp
     inkscape
     kooha
+    whatsapp-for-linux
   ];
 }

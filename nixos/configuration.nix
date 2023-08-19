@@ -30,6 +30,9 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.supportedLocales = [
+    "fr_FR.UTF-8/UTF-8"
+  ];
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "fr_FR.UTF-8";
@@ -97,6 +100,14 @@
       wget
       unzip
     #  thunderbird
+    ];
+  };
+
+  users.users.rigji = {
+    isNormalUser = true;
+    description = "Ridji";
+    packages = with pkgs; [
+      firefox
     ];
   };
 

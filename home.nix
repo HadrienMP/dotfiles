@@ -41,6 +41,7 @@
     fd
     autojump
     ffmpeg_6
+    tidal-hifi
 
     # ----------------------
     # For Spacemacs
