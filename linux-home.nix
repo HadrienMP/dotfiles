@@ -9,5 +9,6 @@
     inkscape
     kooha
     whatsapp-for-linux
+    tidal-hifi
   ];
 }

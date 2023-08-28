@@ -41,7 +41,7 @@
     fd
     autojump
     ffmpeg_6
-    tidal-hifi
+    discord
 
     # ----------------------
     # For Spacemacs
