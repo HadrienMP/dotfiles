@@ -42,6 +42,7 @@
     autojump
     ffmpeg_6
     discord
+    devbox
 
     # ----------------------
     # For Spacemacs
