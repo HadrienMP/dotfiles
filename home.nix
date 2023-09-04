@@ -292,6 +292,15 @@
       ll = "lsd -alh";
     };
   };
+
+  # ---------------------------------------
+  # NuShell
+  # ---------------------------------------
+  programs.nushell = {
+    enable = true;
+    envFile.source = ./nushell/config.nu;
+    configFile.source = ./nushell/config.nu;
+  };
 }
 
 
