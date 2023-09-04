@@ -299,8 +299,6 @@
   # ---------------------------------------
   programs.nushell = {
     enable = true;
-    envFile.source = ./nushell/config.nu;
-    configFile.source = ./nushell/config.nu;
     extraEnv = ''
       $env.AUTOJUMP_ERROR_PATH = '/Users/ash/Library/autojump/errors.log'
       $env.AUTOJUMP_SOURCED = '1'
