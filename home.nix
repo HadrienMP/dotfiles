@@ -303,6 +303,19 @@
       $env.SSH_AUTH_SOCK = '~/.1password/agent.sock'
 
       zoxide init nushell | save -f ~/.zoxide.nu
+      def justtargets [] {just --summary | split row ' '}
+      export extern just [target?: string@justtargets, --summary, --list]
+
+      let fish_completer = {|spans|
+          fish --command $'complete "--do-complete=($spans | str join " ")"'
+          | $"value(char tab)description(char newline)" + $in
+          | from tsv --flexible --no-infer
+      }
+      $env.config.completions.external = {
+        enable: true
+        max_results: 100
+        completer: $fish_completer
+      }
     '';
     extraConfig = ''
       source ~/.zoxide.nu
