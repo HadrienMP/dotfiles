@@ -89,7 +89,7 @@
     isNormalUser = true;
     description = "Hadrien";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
+    shell = pkgs.nushell;
     packages = with pkgs; [
       firefox
       kitty
@@ -104,7 +104,7 @@
     ];
   };
 
-  users.users.rigji = {
+  users.users.ridji = {
     isNormalUser = true;
     description = "Ridji";
     packages = with pkgs; [
