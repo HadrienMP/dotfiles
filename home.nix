@@ -301,6 +301,7 @@
     enable = true;
     extraEnv = ''
       $env.SSH_AUTH_SOCK = '~/.1password/agent.sock'
+      $env.PATH = ($env.PATH | split row ':' | prepend $'($env.HOME)/.nix-profile/bin' | prepend '/nix/var/nix/profiles/default/bin')
 
       zoxide init nushell | save -f ~/.zoxide.nu
       def justtargets [] {just --summary | split row ' '}
