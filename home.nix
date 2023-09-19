@@ -323,6 +323,7 @@
     '';
     shellAliases = {
       ll = "ls -als";
+      gsed = "sed";
     };
   };
 

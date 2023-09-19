@@ -10,5 +10,6 @@
     kooha
     whatsapp-for-linux
     tidal-hifi
+    libreoffice-fresh
   ];
 }
