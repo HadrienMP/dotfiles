@@ -11,5 +11,6 @@
     whatsapp-for-linux
     tidal-hifi
     libreoffice-fresh
+    mattermost-desktop
   ];
 }
