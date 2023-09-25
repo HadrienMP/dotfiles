@@ -63,6 +63,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  virtualisation.docker.enable = true;
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -88,8 +89,8 @@
   users.users.h = {
     isNormalUser = true;
     description = "Hadrien";
-    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.nushell;
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       kitty
