@@ -44,6 +44,7 @@
     ffmpeg_6
     discord
     devbox
+    slack
 
     # ----------------------
     # For Spacemacs
