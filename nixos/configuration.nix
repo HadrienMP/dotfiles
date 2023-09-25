@@ -89,8 +89,8 @@
   users.users.h = {
     isNormalUser = true;
     description = "Hadrien";
-    shell = pkgs.nushell;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = "/home/h/.nix-profile/bin/nu";
     packages = with pkgs; [
       firefox
       kitty
