@@ -64,6 +64,7 @@
   services.printing.enable = true;
 
   virtualisation.docker.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -101,6 +102,7 @@
       git
       wget
       unzip
+      nix-index
     #  thunderbird
     ];
   };
