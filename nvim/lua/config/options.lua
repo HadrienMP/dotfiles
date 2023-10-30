@@ -12,3 +12,5 @@ vim.o.relativenumber = false
 vim.o.number = true
 
 vim.g.autoclose_on = 0
+
+vim.o.exrc = true
