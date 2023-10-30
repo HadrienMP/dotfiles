@@ -337,6 +337,14 @@
     enableFishIntegration = true;
   };
   xdg.configFile."starship.toml".source = ./starship.toml;
+
+
+  # ---------------------------------------
+  # Helix
+  # ---------------------------------------
+  programs.helix = {
+    enable = true;
+  };
 }
 
 
