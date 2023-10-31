@@ -23,7 +23,7 @@
     fzf
     docker
     gcc
-    postman
+    # postman
     vscode
     ngrok
     hugo
@@ -230,6 +230,9 @@
     enable = true;
     theme = "Dracula";
     font = { name = "FiraCode Nerd Font"; };
+    settings = {
+      confirm_os_window_close = 0;
+    };
   };
 
 
