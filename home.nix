@@ -193,6 +193,7 @@
       hide = "update-index --assume-unchanged";
       unhide = "update-index --no-assume-unchanged";
       show-hidden = "!git ls-files -v | grep '^h' | cut -c3";
+      housekeeping = "!git branch --merged | grep -v main | xargs git branch -d";
     };
     extraConfig = {
       core = {
