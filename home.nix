@@ -22,6 +22,7 @@
     oh-my-fish
     fzf
     docker
+    docker-credential-helpers
     gcc
     # postman
     vscode
