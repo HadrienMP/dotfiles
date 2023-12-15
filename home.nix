@@ -85,6 +85,11 @@
           context = "global";
           command = "gitmoji -c";
         }
+        {
+          key = "H";
+          context = "localBranches";
+          command = "git housekeeping";
+        }
       ];
     };
   };
