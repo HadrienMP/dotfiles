@@ -9,6 +9,7 @@
     inkscape
     kooha
     whatsapp-for-linux
+    signal-desktop
     tidal-hifi
     libreoffice-fresh
     mattermost-desktop
