@@ -13,7 +13,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -86,7 +85,6 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  programs.fish.enable = true;
   users.users.h = {
     isNormalUser = true;
     description = "Hadrien";
@@ -103,15 +101,6 @@
       wget
       unzip
       nix-index
-    #  thunderbird
-    ];
-  };
-
-  users.users.ridji = {
-    isNormalUser = true;
-    description = "Ridji";
-    packages = with pkgs; [
-      firefox
     ];
   };
 
@@ -130,8 +119,8 @@
   #-----------------------------
   # For Gnome extensions
   #-----------------------------
-  nixpkgs.config.firefox.enableGnomeExtensions = true;
-  services.gnome.gnome-browser-connector.enable = true;
+  # nixpkgs.config.firefox.enableGnomeExtensions = true;
+  # services.gnome.gnome-browser-connector.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -158,13 +147,13 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 
   nix.settings.experimental-features = "nix-command flakes";
 
   fonts = {
-    enableDefaultFonts = true;
-    fonts = with pkgs; [
+    enableDefaultPackages = true;
+    packages = with pkgs; [
       (nerdfonts.override { fonts = [ "Hack" ]; })
     ];
     fontconfig = {
