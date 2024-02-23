@@ -1,0 +1,6 @@
+# $XDG_CONFIG_HOME/process-compose/shortcuts.yaml
+shortcuts:
+  process_start:
+    shortcut: Ctrl-U
+  process_stop:
+    shortcut: Ctrl-X

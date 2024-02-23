@@ -68,6 +68,7 @@
   fonts.fontconfig.enable = true;
 
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
+  xdg.configFile."process-compose/shortcuts.yaml".source = ./process-compose/shortcuts.yaml;
 
   home.shellAliases = {
     ll = "lsd -alh";
@@ -223,8 +224,8 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-    Host *
-      IdentityAgent ~/.1password/agent.sock
+      Host *
+        IdentityAgent ~/.1password/agent.sock
     '';
   };
 
@@ -316,6 +317,7 @@
       $env.PATH = ($env.PATH | split row ':' | prepend $'($env.HOME)/.nix-profile/bin' | prepend '/nix/var/nix/profiles/default/bin')
       $env.PATH = ($env.PATH | prepend $'/run/current-system/sw/bin')
       $env.PATH = ($env.PATH | prepend $'/run/wrappers/bin/')
+      $env.XDG_CONFIG_HOME = $'($env.HOME)/.config/'
 
       zoxide init nushell | save -f ~/.zoxide.nu
       def justtargets [] {just --summary | split row ' '}
