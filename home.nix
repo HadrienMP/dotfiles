@@ -46,6 +46,7 @@
     discord
     devbox
     slack
+    openvpn
 
     # ----------------------
     # For Spacemacs
