@@ -1,6 +1,6 @@
 return {
     { "catppuccin/nvim", name = "catppuccin" },
-    { "Mofiqul/dracula.nvim", name = "dracula" },
+    { "binhtran432k/dracula.nvim" },
     {
         "LazyVim/LazyVim",
         opts = {
