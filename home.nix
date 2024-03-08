@@ -47,6 +47,7 @@
     devbox
     slack
     openvpn
+    spotify
 
     # ----------------------
     # For Spacemacs
