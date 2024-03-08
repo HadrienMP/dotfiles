@@ -335,9 +335,7 @@
         completer: $fish_completer
       }
     '';
-    extraConfig = ''
-      source ~/.zoxide.nu
-    '';
+    configFile.source = ./config.nu;
     shellAliases = {
       ll = "ls -als";
     };
