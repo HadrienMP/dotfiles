@@ -242,6 +242,8 @@
     font = { name = "FiraCode Nerd Font"; };
     settings = {
       confirm_os_window_close = 0;
+      wayland_titlebar_color = "background";
+      macos_titlebar_color = "background";
     };
   };
 
