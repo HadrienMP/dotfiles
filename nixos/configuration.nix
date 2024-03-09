@@ -103,7 +103,6 @@
       unzip
       nix-index
       gnome-extension-manager
-      gnomeExtensions.no-titlebar-when-maximized
     ];
   };
 
@@ -123,8 +122,8 @@
   #-----------------------------
   # For Gnome extensions
   #-----------------------------
-  # nixpkgs.config.firefox.enableGnomeExtensions = true;
-  # services.gnome.gnome-browser-connector.enable = true;
+  programs.firefox.nativeMessagingHosts.packages = [pkgs.gnome-browser-connector];
+  services.gnome.gnome-browser-connector.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
