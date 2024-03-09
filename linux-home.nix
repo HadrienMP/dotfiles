@@ -13,5 +13,6 @@
     tidal-hifi
     libreoffice-fresh
     mattermost-desktop
+    betterbird
   ];
 }

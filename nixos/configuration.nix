@@ -31,6 +31,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.supportedLocales = [
+    "en_US.UTF-8/UTF-8"
     "fr_FR.UTF-8/UTF-8"
   ];
 
@@ -101,6 +102,8 @@
       wget
       unzip
       nix-index
+      gnome-extension-manager
+      gnomeExtensions.no-titlebar-when-maximized
     ];
   };
 
@@ -114,6 +117,7 @@
   #  wget
     brightnessctl
     gnome.gnome-tweaks
+    glibcLocales
   ];
 
   #-----------------------------
