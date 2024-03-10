@@ -116,14 +116,27 @@
   #  wget
     brightnessctl
     gnome.gnome-tweaks
-    glibcLocales
+    pass
+    protonmail-bridge
   ];
 
-  #-----------------------------
-  # For Gnome extensions
-  #-----------------------------
-  programs.firefox.nativeMessagingHosts.packages = [pkgs.gnome-browser-connector];
-  services.gnome.gnome-browser-connector.enable = true;
+  # ----------------------------------------
+  # Mail
+  # ----------------------------------------
+  services.gnome.gnome-keyring.enable = true;
+
+  # Before starting the service, use `protonmail-bridge --cli` and run 'login'
+  # to configure.
+  systemd.user.services.protonmail-bridge = {
+    description = "Protonmail Bridge";
+    after = [ "network-online.target" ];
+    wantedBy = [ "default.target" ];
+    path = [pkgs.pass];
+    serviceConfig = {
+      Restart = "always";
+      ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --noninteractive";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
