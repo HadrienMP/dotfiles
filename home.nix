@@ -123,11 +123,9 @@
     enable = true;
     plugins = with pkgs.tmuxPlugins; [
       {
-        plugin = power-theme;
+        plugin = catppuccin;
         extraConfig = ''
-          set -g @tmux_power_theme '#80abf6' 
-          set -g @tmux_power_left_arrow_icon ''
-          set -g @tmux_power_right_arrow_icon ''
+          set -g @catppuccin_window_middle_separator "\ue0b4 "
         '';
       }
       {
@@ -159,6 +157,12 @@
     mouse = true;
     sensibleOnTop = false;
     escapeTime = 10;
+    baseIndex = 1;
+    terminal = "screen-256color";
+    clock24 = true;
+    extraConfig = ''
+      set-option -g status-position top
+    '';
   };
 
   # ---------------------------------------
