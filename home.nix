@@ -160,8 +160,23 @@
     baseIndex = 1;
     terminal = "screen-256color";
     clock24 = true;
+    prefix = "C-b";
     extraConfig = ''
       set-option -g status-position top
+
+      # Create a new session from the current path
+      bind S new-session -c "#{pane_current_path}"
+
+      # Set the path of the current session to the current path
+      bind . attach-session -c "#{pane_current_path}"
+      
+      # Use | to split vertically
+      unbind %
+      bind | split-window -h
+
+      # Use - to split horizontally
+      unbind "\""
+      bind "-" split-window -v
     '';
   };
 
