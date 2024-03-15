@@ -18,36 +18,35 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    lsd
-    oh-my-fish
-    fzf
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+    _1password
+    _1password-gui
+    autojump
+    cachix
+    dbeaver
+    devbox
+    discord
     docker
     docker-credential-helpers
+    fd
+    ffmpeg_6
+    fzf
     gcc
-    # postman
-    vscode
-    ngrok
     hugo
-    nodejs
+    lsd
     mob # Mob.sh
-    dbeaver
-    _1password-gui
-    _1password
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
-    xclip
     neofetch
+    ngrok
     nodePackages.degit
     nodePackages.gitmoji-cli
-    cachix
-    fd
-    autojump
-    zoxide
-    ffmpeg_6
-    discord
-    devbox
-    slack
+    nodejs
+    oh-my-fish
     openvpn
+    slack
     spotify
+    vscode
+    xclip
+    zoxide
 
     # ----------------------
     # For Spacemacs
@@ -58,13 +57,13 @@
     # ----------------------
     # For NVIM
     # ----------------------
-    tree-sitter
-    ripgrep
-    fd
     elmPackages.elm-language-server
-    nodePackages.typescript-language-server
+    fd
     gnused
     lua54Packages.jsregexp
+    nodePackages.typescript-language-server
+    ripgrep
+    tree-sitter
   ];
 
   fonts.fontconfig.enable = true;
