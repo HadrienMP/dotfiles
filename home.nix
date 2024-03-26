@@ -22,6 +22,7 @@
     _1password
     _1password-gui
     autojump
+    btop
     cachix
     dbeaver
     devbox
@@ -44,6 +45,7 @@
     openvpn
     slack
     spotify
+    tldr
     vscode
     xclip
     zoxide
