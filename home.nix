@@ -29,7 +29,6 @@
     discord
     docker
     docker-credential-helpers
-    fd
     ffmpeg_6
     fzf
     gcc
@@ -45,6 +44,7 @@
     openvpn
     slack
     spotify
+    termshot
     tldr
     vscode
     xclip
