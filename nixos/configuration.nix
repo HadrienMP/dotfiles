@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "akachat"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -116,27 +116,7 @@
   #  wget
     brightnessctl
     gnome.gnome-tweaks
-    pass
-    protonmail-bridge
   ];
-
-  # ----------------------------------------
-  # Mail
-  # ----------------------------------------
-  services.gnome.gnome-keyring.enable = true;
-
-  # Before starting the service, use `protonmail-bridge --cli` and run 'login'
-  # to configure.
-  systemd.user.services.protonmail-bridge = {
-    description = "Protonmail Bridge";
-    after = [ "network-online.target" ];
-    wantedBy = [ "default.target" ];
-    path = [pkgs.pass];
-    serviceConfig = {
-      Restart = "always";
-      ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --noninteractive";
-    };
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -185,4 +165,10 @@
     automatic = true; dates = "weekly";
     options = "--delete-older-than 30d";
   };
-}
+  # fileSystems."/nix" = {
+  #    device = "/dev/disk/by-label/nix";
+  #    fsType = "ext4";
+  #    neededForBoot = true;
+  #    options = [ "noatime" ];
+  #  };
+ }
