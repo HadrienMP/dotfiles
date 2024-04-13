@@ -22,6 +22,16 @@
     { device = "/dev/disk/by-uuid/8DC5-DFBD";
       fsType = "vfat";
     };
+  fileSystems."/run/media/h/Data" = 
+    { device = "/dev/disk/by-uuid/34d4023b-202f-41f9-86ec-e72a877d582b";
+      fsType = "ext4";
+    };
+  # fileSystems."/nix" = {
+  #    device = "/dev/disk/by-uuid/a37d810c-6d19-45df-8c8f-f978233f0828";
+  #    fsType = "ext4";
+  #    neededForBoot = true;
+  #    options = [ "noatime" ];
+  #  };
 
   swapDevices = [ ];
 
