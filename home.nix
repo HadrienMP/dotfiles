@@ -24,6 +24,7 @@
     autojump
     btop
     cachix
+    chromium
     dbeaver
     devbox
     discord
