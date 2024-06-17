@@ -24,4 +24,5 @@ nixos-update:
 install-nix-darwin:
 	cp nix-darwin/flake.nix ~/.config/nix-darwin/flake.nix
 	darwin-rebuild switch --flake ~/.config/nix-darwin
+	sudo cp ./nix-darwin/ergol.keylayout "/Library/Keyboard Layouts/"
 	 

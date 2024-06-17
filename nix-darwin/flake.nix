@@ -14,7 +14,6 @@
         # $ nix-env -qaP | grep wget
         environment.systemPackages =
           [
-            pkgs.vim
             pkgs.gnused
             (pkgs.writeShellScriptBin "gsed" "exec ${pkgs.gnused}/bin/sed \"$@\"")
             pkgs.home-manager
