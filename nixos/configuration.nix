@@ -93,16 +93,18 @@
     shell = "/home/h/.nix-profile/bin/nu";
     packages = with pkgs; [
       firefox
-      kitty
-      vim
-      home-manager
       gcc
-      gnumake
       git
-      wget
-      unzip
-      nix-index
       gnome-extension-manager
+      gnumake
+      home-manager
+      kitty
+      nix-index
+      protonvpn-gui
+      sayonara
+      unzip
+      vim
+      wget
     ];
   };
 
