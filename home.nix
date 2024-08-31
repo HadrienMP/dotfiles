@@ -26,22 +26,13 @@
     cachix
     chromium
     devbox
-    discord
-    docker
-    docker-credential-helpers
     ffmpeg_6
     fzf
-    gcc
     hugo
     lsd
     mob # Mob.sh
     neofetch
-    ngrok
-    nodePackages.degit
-    nodePackages.gitmoji-cli
-    nodejs
     oh-my-fish
-    openvpn
     slack
     spotify
     termshot
@@ -49,12 +40,6 @@
     vscode
     xclip
     zoxide
-
-    # ----------------------
-    # For Spacemacs
-    # ----------------------
-    emacs
-    gnutar
 
     # ----------------------
     # For NVIM
@@ -269,19 +254,6 @@
 
 
   # ---------------------------------------
-  # Spacemacs
-  # ---------------------------------------
-  home.file.".emacs.d" = {
-    recursive = true;
-    source = pkgs.fetchFromGitHub {
-      owner = "syl20bnr";
-      repo = "spacemacs";
-      rev = "26629bf3a5b8d0228be23827bb86dbd8d8087378";
-      sha256 = "sha256-SYYbUHomnYE99tdmfxA/3xVhb/F5AD13bTbcxpesO2s=";
-    };
-  };
-
-  # ---------------------------------------
   # Fish
   # ---------------------------------------
 
@@ -318,8 +290,7 @@
       fish_add_path $HOME"/.yarn/bin"
       fish_add_path $HOME"/.npm-packages/bin"
       fish_add_path $HOME"/.local/bin"
-      agnoster powerline
-      set -U AGNOSTER_SEGMENT_SEPARATOR '' '  '
+      zoxide init fish | source
     '';
     shellAliases = {
       rm = "rm -i";
@@ -334,8 +305,8 @@
   # NuShell
   # ---------------------------------------
   programs.nushell = {
-    enable = true;
-    package = pkgs.nushellFull;
+    enable = false;
+    package = pkgs.nushell;
     extraEnv = ''
       $env.SSH_AUTH_SOCK = '~/.1password/agent.sock'
       $env.PATH = ($env.PATH | split row ':' | prepend $'($env.HOME)/.nix-profile/bin' | prepend '/nix/var/nix/profiles/default/bin')
@@ -373,14 +344,6 @@
     enableFishIntegration = true;
   };
   xdg.configFile."starship.toml".source = ./starship.toml;
-
-
-  # ---------------------------------------
-  # Helix
-  # ---------------------------------------
-  programs.helix = {
-    enable = true;
-  };
 }
 
 

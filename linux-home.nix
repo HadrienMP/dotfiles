@@ -8,11 +8,8 @@
     gimp
     inkscape
     kooha
-    whatsapp-for-linux
-    signal-desktop
-    tidal-hifi
     libreoffice-fresh
-    mattermost-desktop
-    betterbird
+    # logseq
+    signal-desktop
   ];
 }
