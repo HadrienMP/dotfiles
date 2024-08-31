@@ -22,6 +22,9 @@
         "h" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             config.allowUnfree = true;
+            config.permittedInsecurePackages = [
+              "electron-27.3.11" # For logseq
+            ];
             system = "x86_64-linux";
           };
           modules = [ ./home.nix ./linux-home.nix ];

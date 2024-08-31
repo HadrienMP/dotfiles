@@ -9,7 +9,7 @@
     inkscape
     kooha
     libreoffice-fresh
-    # logseq
+    logseq
     signal-desktop
   ];
 }
