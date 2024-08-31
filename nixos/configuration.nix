@@ -66,7 +66,7 @@
   virtualisation.docker.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -90,7 +90,7 @@
     isNormalUser = true;
     description = "Hadrien";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = "/home/h/.nix-profile/bin/nu";
+    shell = "/home/h/.nix-profile/bin/fish";
     packages = with pkgs; [
       firefox
       gcc
