@@ -18,11 +18,12 @@ nixos-install:
 	sudo nixos-rebuild switch --flake nixos/
 nixos-update:
 	cd nixos && nix flake update
+
 # -----------------------------------
 #  Darnwin
 # -----------------------------------
 install-nix-darwin:
 	cp nix-darwin/flake.nix ~/.config/nix-darwin/flake.nix
 	darwin-rebuild switch --flake ~/.config/nix-darwin
-	sudo cp ./nix-darwin/ergol.keylayout "/Library/Keyboard Layouts/"
+	sudo cp ./nix-darwin/lafayette_macos_v0.9.keylayout "/Library/Keyboard Layouts/"
 	 
