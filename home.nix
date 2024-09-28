@@ -19,12 +19,9 @@
 
   home.packages = with pkgs; [
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
-    _1password
-    _1password-gui
     autojump
     btop
     cachix
-    chromium
     devbox
     ffmpeg_6
     fzf
