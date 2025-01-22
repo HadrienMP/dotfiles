@@ -240,7 +240,7 @@
   # ---------------------------------------
   programs.kitty = {
     enable = true;
-    theme = "Dracula";
+    themeFile = "Dracula";
     font = { name = "FiraCode Nerd Font"; };
     settings = {
       confirm_os_window_close = 0;
