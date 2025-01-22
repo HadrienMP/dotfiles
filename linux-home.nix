@@ -7,12 +7,15 @@
   home.packages = with pkgs; [
     _1password
     _1password-gui
+    audacity
     chromium
     gimp
     inkscape
     kooha
     libreoffice-fresh
     logseq
+    pulseaudio
+    pulseaudio-ctl
     signal-desktop
   ];
 }
