@@ -18,7 +18,8 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+    nerd-fonts._0xproto
+    nerd-fonts.fira-code
     autojump
     btop
     cachix
