@@ -242,7 +242,7 @@
   programs.kitty = {
     enable = true;
     themeFile = "Dracula";
-    font = { name = "FiraCode Nerd Font"; };
+    font = { name = "FiraCode Nerd Font, Regular"; };
     settings = {
       confirm_os_window_close = 0;
       wayland_titlebar_color = "background";

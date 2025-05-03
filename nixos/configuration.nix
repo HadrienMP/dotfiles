@@ -67,7 +67,7 @@
 
   # Enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -95,7 +95,7 @@
       firefox
       gcc
       git
-      gnome-extension-manager
+      # gnome-extension-manager
       gnumake
       home-manager
       kitty
@@ -117,7 +117,7 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     brightnessctl
-    gnome.gnome-tweaks
+    gnome-tweaks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -152,7 +152,8 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "Hack" ]; })
+      nerd-fonts._0xproto
+      nerd-fonts.hack
     ];
     fontconfig = {
       defaultFonts = {

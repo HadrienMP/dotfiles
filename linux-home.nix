@@ -17,5 +17,6 @@
     pulseaudio
     pulseaudio-ctl
     signal-desktop
+    rhythmbox
   ];
 }
