@@ -1,22 +1,22 @@
 USER = $(shell whoami)
 
-install: home-manager-install
-update: home-manager-update
+install: install-nixos install-home
+update: update-nixos update-home
 
 # -----------------------------------
 #  Home Manager
 # -----------------------------------
-home-manager-install:
+install-home:
 	git add . && home-manager switch --flake ".#${USER}"
-home-manager-update:
+update-home:
 	nix flake update
 
 # -----------------------------------
 #  Nixos
 # -----------------------------------
-nixos-install:
+install-nixos:
 	sudo nixos-rebuild switch --flake nixos/
-nixos-update:
+update-nixos:
 	cd nixos && nix flake update
 
 # -----------------------------------
