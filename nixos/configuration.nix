@@ -59,6 +59,11 @@
     layout = "us";
     variant = "altgr-intl";
   };
+  services.xserver.xkb.extraLayouts.lafayette= {
+    description = "QWERTY Lafayette";
+    languages   = [ "fr" "en" ];
+    symbolsFile = ./lafayette_linux_v0.9.xkb_custom;
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
