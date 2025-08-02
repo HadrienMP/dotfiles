@@ -21,7 +21,7 @@ update-home:
 #  Nixos
 # -----------------------------------
 install-nixos:
-	sudo nixos-rebuild switch --flake nixos/
+	cd nixos && sudo nixos-rebuild switch --flake flake.nix
 update-nixos:
 	cd nixos && nix flake update
 
