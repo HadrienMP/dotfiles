@@ -1,15 +1,21 @@
 USER = $(shell whoami)
+ARCH = $(shell uname -s)
 
+ifeq (Darwin, ${ARCH})
+install: install-home
+else
 install: install-nixos install-home
-update: update-nixos update-home
+endif
+
+update: update-nixos update-nix-darwin update-home
 
 # -----------------------------------
 #  Home Manager
 # -----------------------------------
 install-home:
-	git add . && home-manager switch --flake ".#${USER}"
+	git add . && cd home && home-manager switch --flake ".#${USER}"
 update-home:
-	nix flake update
+	cd home && nix flake update
 
 # -----------------------------------
 #  Nixos
@@ -27,3 +33,6 @@ install-nix-darwin:
 	darwin-rebuild switch --flake ~/.config/nix-darwin
 	sudo cp ./nix-darwin/lafayette_macos_v0.9.keylayout "/Library/Keyboard Layouts/"
 	 
+update-nix-darwin:
+	cd nix-darwin && nix flake update
+
