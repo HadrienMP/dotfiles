@@ -2,7 +2,7 @@ USER = $(shell whoami)
 ARCH = $(shell uname -s)
 
 ifeq (Darwin, ${ARCH})
-install: install-home
+install: install-nix-darwin install-home
 else
 install: install-nixos install-home
 endif
@@ -29,9 +29,7 @@ update-nixos:
 #  Darnwin
 # -----------------------------------
 install-nix-darwin:
-	cp nix-darwin/flake.nix ~/.config/nix-darwin/flake.nix
-	darwin-rebuild switch --flake ~/.config/nix-darwin
-	sudo cp ./nix-darwin/lafayette_macos_v0.9.keylayout "/Library/Keyboard Layouts/"
+	cd nix-darwin && ./install.sh
 	 
 update-nix-darwin:
 	cd nix-darwin && nix flake update
