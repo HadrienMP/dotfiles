@@ -31,6 +31,7 @@
     mob # Mob.sh
     neofetch
     oh-my-fish
+    pom
     slack
     spotify
     termshot
