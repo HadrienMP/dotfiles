@@ -11,19 +11,22 @@
   };
 
   outputs = { nixpkgs, home-manager, bootstrap-kata, ... }:
+    let
+      home-config = platform: home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {
+          config.allowUnfree = true;
+          system = platform;
+        };
+        modules = [
+          ./home.nix
+          ./${platform}-home.nix
+          { home.packages = [ bootstrap-kata.packages.${platform}.bootstrap-kata ]; }
+        ];
+      };
+    in
     {
       homeConfigurations = {
-        "ash" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            config.allowUnfree = true;
-            system = "aarch64-darwin";
-          };
-          modules = [
-            ./home.nix
-            ./mac-home.nix
-            { home.packages = [ bootstrap-kata.packages."aarch64-darwin".bootstrap-kata ]; }
-          ];
-        };
+        "ash" = home-config "aarch64-darwin";
         "h" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             config.allowUnfree = true;
