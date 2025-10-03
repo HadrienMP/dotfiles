@@ -310,40 +310,6 @@
   };
 
   # ---------------------------------------
-  # NuShell
-  # ---------------------------------------
-  programs.nushell = {
-    enable = false;
-    package = pkgs.nushell;
-    extraEnv = ''
-      $env.SSH_AUTH_SOCK = '~/.1password/agent.sock'
-      $env.PATH = ($env.PATH | split row ':' | prepend $'($env.HOME)/.nix-profile/bin' | prepend '/nix/var/nix/profiles/default/bin')
-      $env.PATH = ($env.PATH | prepend $'/run/current-system/sw/bin')
-      $env.PATH = ($env.PATH | prepend $'/run/wrappers/bin/')
-      $env.XDG_CONFIG_HOME = $'($env.HOME)/.config/'
-
-      zoxide init nushell | save -f ~/.zoxide.nu
-      def justtargets [] {just --summary | split row ' '}
-      export extern just [target?: string@justtargets, --summary, --list]
-
-      let fish_completer = {|spans|
-          fish --command $'complete "--do-complete=($spans | str join " ")"'
-          | $"value(char tab)description(char newline)" + $in
-          | from tsv --flexible --no-infer
-      }
-      $env.config.completions.external = {
-        enable: true
-        max_results: 100
-        completer: $fish_completer
-      }
-    '';
-    configFile.source = ./config.nu;
-    shellAliases = {
-      ll = "ls -als";
-    };
-  };
-
-  # ---------------------------------------
   # Starship
   # ---------------------------------------
   programs.starship = {
