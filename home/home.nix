@@ -18,19 +18,21 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    nerd-fonts._0xproto
-    nerd-fonts.fira-code
-    nerd-fonts.fira-mono
     autojump
     btop
     cachix
     devbox
     ffmpeg_6
+    fira-code
     fzf
     hugo
+    inputs.bootstrap-kata.packages."${system}".bootstrap-kata
+    inputs.zen-browser.packages."${system}".beta
     lsd
     mob # Mob.sh
     neofetch
+    nerd-fonts._0xproto
+    nerd-fonts.fira-mono
     oh-my-fish
     pom
     slack
@@ -40,8 +42,6 @@
     vscode
     xclip
     zoxide
-    inputs.bootstrap-kata.packages."${system}".bootstrap-kata
-    inputs.zen-browser.packages."${system}".beta
   ];
 
   fonts.fontconfig.enable = true;

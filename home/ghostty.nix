@@ -8,7 +8,8 @@
     installBatSyntax = true;
     installVimSyntax = true;
     settings = {
-      font-family = "FiraMono Nerd Font";
+      font-family = "Fira Code";
+      font-feature = "+calt +liga, +dlig";
       theme = "Dracula";
       window-decoration = "none";
     };
