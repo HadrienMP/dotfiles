@@ -16,7 +16,7 @@
     logseq
     pulseaudio
     pulseaudio-ctl
-    signal-desktop
     rhythmbox
+    signal-desktop
   ];
 }
