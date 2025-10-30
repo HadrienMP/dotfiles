@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, bootstrap-kata, ... }:
+  outputs = { nixpkgs, home-manager, bootstrap-kata, zen-browser, ... } @ inputs :
     let
       home-config = platform: home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
@@ -27,8 +31,8 @@
           ./nvim.nix
           ./tmux.nix
           ./${platform}-home.nix
-          { home.packages = [ bootstrap-kata.packages.${platform}.bootstrap-kata ]; }
         ];
+        extraSpecialArgs = { inherit inputs; system = platform;};
       };
     in
     {

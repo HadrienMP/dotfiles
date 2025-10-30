@@ -9,6 +9,7 @@
     nodePackages.typescript-language-server
     ripgrep
     tree-sitter
+    nodejs
   ];
 
   programs.neovim = {

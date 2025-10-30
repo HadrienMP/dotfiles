@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, system, inputs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
     nerd-fonts._0xproto
     nerd-fonts.fira-code
+    nerd-fonts.fira-mono
     autojump
     btop
     cachix
@@ -39,6 +40,8 @@
     vscode
     xclip
     zoxide
+    inputs.bootstrap-kata.packages."${system}".bootstrap-kata
+    inputs.zen-browser.packages."${system}".beta
   ];
 
   fonts.fontconfig.enable = true;
@@ -71,14 +74,6 @@
     };
   };
 
-
-  # ---------------------------------------
-  # Tmate
-  # ---------------------------------------
-  programs.tmate = {
-    enable = true;
-  };
-
   # ---------------------------------------
   # Direnv
   # ---------------------------------------
@@ -108,7 +103,7 @@
   programs.kitty = {
     enable = true;
     themeFile = "Dracula";
-    font = { name = "FiraCode Nerd Font Mono"; };
+    font = { name = "FiraMono Nerd Font"; };
     settings = {
       confirm_os_window_close = 0;
       wayland_titlebar_color = "background";

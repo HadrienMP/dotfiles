@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/h";
 
   home.packages = with pkgs; [
-    _1password
+    _1password-cli
     _1password-gui
     audacity
     chromium
