@@ -46,8 +46,8 @@
 
   fonts.fontconfig.enable = true;
 
-  xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
-  xdg.configFile."process-compose/shortcuts.yaml".source = ./process-compose/shortcuts.yaml;
+  xdg.configFile."nixpkgs/config.nix".source = ./config/nixpkgs-config.nix;
+  xdg.configFile."process-compose/shortcuts.yaml".source = ./config/process-compose/shortcuts.yaml;
 
   home.shellAliases = {
     ll = "lsd -alh";
@@ -122,7 +122,7 @@
     enableNushellIntegration = true;
     enableFishIntegration = true;
   };
-  xdg.configFile."starship.toml".source = ./starship.toml;
+  xdg.configFile."starship.toml".source = ./config/starship.toml;
 }
 
 

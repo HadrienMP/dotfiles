@@ -30,12 +30,12 @@
         };
         modules = [
           ./home.nix
-          ./fish.nix
-          ./git.nix
-          ./nvim.nix
-          ./tmux.nix
-          ./ghostty.nix
-          ./${platform}-home.nix
+          ./programs/fish.nix
+          ./programs/git.nix
+          ./programs/nvim.nix
+          ./programs/tmux.nix
+          ./programs/ghostty.nix
+          ./system-specific/${platform}-home.nix
         ];
         extraSpecialArgs = { inherit inputs; system = platform;};
       };
