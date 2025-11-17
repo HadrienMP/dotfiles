@@ -11,6 +11,7 @@
     chromium
     gimp
     inkscape
+    insomnia
     kooha
     libreoffice-fresh
     logseq
