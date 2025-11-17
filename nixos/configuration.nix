@@ -86,6 +86,11 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
