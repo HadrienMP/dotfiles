@@ -103,9 +103,7 @@
       # gnome-extension-manager
       gnumake
       home-manager
-      kitty
       nix-index
-      protonvpn-gui
       sayonara
       unzip
       vim
