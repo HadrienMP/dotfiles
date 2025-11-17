@@ -12,13 +12,9 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, home-manager, bootstrap-kata, zen-browser, ghostty, ... } @ inputs :
+  outputs = { nixpkgs, home-manager, bootstrap-kata, zen-browser, ... } @ inputs :
     let
       home-config = platform: home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
@@ -34,7 +30,6 @@
           ./programs/git.nix
           ./programs/nvim.nix
           ./programs/tmux.nix
-          ./programs/ghostty.nix
           ./system-specific/${platform}-home.nix
         ];
         extraSpecialArgs = { inherit inputs; system = platform;};
