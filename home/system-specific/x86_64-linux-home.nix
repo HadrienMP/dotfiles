@@ -14,6 +14,7 @@
     kooha
     libreoffice-fresh
     logseq
+    protonvpn-gui
     pulseaudio
     pulseaudio-ctl
     rhythmbox
