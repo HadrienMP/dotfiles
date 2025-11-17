@@ -111,6 +111,7 @@
       wayland_titlebar_color = "background";
       macos_titlebar_color = "background";
       disable_ligatures = "never";
+      hide_window_decorations = "yes";
     };
   };
 
