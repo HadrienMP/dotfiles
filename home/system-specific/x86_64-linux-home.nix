@@ -9,6 +9,7 @@
     _1password-gui
     audacity
     chromium
+    deluge
     gimp
     inkscape
     insomnia
