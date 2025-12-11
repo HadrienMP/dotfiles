@@ -28,8 +28,13 @@
           ./home.nix
           ./programs/fish.nix
           ./programs/git.nix
-          ./programs/nvim.nix
+          ./programs/kitty.nix
+          ./programs/nvim/nvim.nix
+          ./programs/starship/starship.nix
           ./programs/tmux.nix
+          ./programs/lazygit.nix
+          ./programs/direnv.nix
+          ./programs/ssh.nix
           ./system-specific/${platform}-home.nix
         ];
         extraSpecialArgs = { inherit inputs; system = platform;};

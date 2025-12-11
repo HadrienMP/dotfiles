@@ -1,24 +1,12 @@
 { config, pkgs, system, inputs, lib, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
   home.stateVersion = "22.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    autojump
     btop
     cachix
     devbox
@@ -52,81 +40,4 @@
   home.shellAliases = {
     ll = "lsd -alh";
   };
-
-  # ---------------------------------------
-  # Lazygit
-  # ---------------------------------------
-  programs.lazygit = {
-    enable = true;
-    settings = {
-      customCommands = [
-        {
-          key = "!";
-          context = "global";
-          command = "gitmoji -c";
-        }
-        {
-          key = "H";
-          context = "localBranches";
-          command = "git housekeeping";
-        }
-      ];
-    };
-  };
-
-  # ---------------------------------------
-  # Direnv
-  # ---------------------------------------
-  programs.direnv = {
-    enable = true;
-    nix-direnv = {
-      enable = true;
-    };
-  };
-
-  # ---------------------------------------
-  # Ssh
-  # ---------------------------------------
-  programs.ssh = {
-    enable = true;
-    enableDefaultConfig = false;
-    matchBlocks."*" = {
-      extraOptions = {
-        IdentityAgent = "~/.1password/agent.sock";
-      };
-    };
-  };
-
-
-
-  # ---------------------------------------
-  # Terminals
-  # ---------------------------------------
-  programs.kitty = {
-    enable = true;
-    themeFile = "Dracula";
-    font = { name = "FiraMono Nerd Font"; };
-    settings = {
-      confirm_os_window_close = 0;
-      wayland_titlebar_color = "background";
-      macos_titlebar_color = "background";
-      disable_ligatures = "never";
-      hide_window_decorations = "yes";
-    };
-  };
-
-  # ---------------------------------------
-  # Starship
-  # ---------------------------------------
-  programs.starship = {
-    enable = true;
-    enableNushellIntegration = true;
-    enableFishIntegration = true;
-  };
-  xdg.configFile."starship.toml".source = ./config/starship.toml;
 }
-
-
-
-
-

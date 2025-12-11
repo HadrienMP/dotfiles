@@ -20,10 +20,10 @@
       lazygit-nvim
       vim-nix
     ];
-    extraConfig = lib.fileContents ../config/nvim/init.lua;
+    extraConfig = lib.fileContents ./config/init.lua;
   };
   xdg.configFile.nvim = {
-    source = ../config/nvim;
+    source = ./config;
     recursive = true;
   };
 }
