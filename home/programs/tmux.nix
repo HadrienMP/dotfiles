@@ -1,10 +1,11 @@
 { config, pkgs, lib, ... }:
-
 {
+  home.packages = with pkgs; [
+    sysstat
+  ];
   programs.tmux = {
     enable = true;
     plugins = with pkgs.tmuxPlugins; [
-      { plugin = cpu; }
       {
         plugin = catppuccin;
         extraConfig = ''
@@ -13,11 +14,16 @@
           set -g status-left-length 100
           set -g status-left ""
           set -g status-right "#{E:@catppuccin_status_application}"
-          set -agF status-right "#{E:@catppuccin_status_cpu}"
+
+          # CPU
+          set -ag status-right "#[bg=#{@thm_yellow},fg=#{@thm_crust}]#[reverse]#[noreverse] "
+          set -ag status-right "#[bg=#{@thm_surface_0},fg=#{@thm_fg}] #{cpu_percentage} "
+
           set -ag status-right "#{E:@catppuccin_status_session}"
           set -ag status-right "#{E:@catppuccin_status_uptime}"
         '';
       }
+      { plugin = cpu; }
       {
         plugin = vim-tmux-navigator;
         extraConfig = ''
