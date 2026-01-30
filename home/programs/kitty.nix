@@ -3,7 +3,7 @@
 {
   programs.kitty = {
     enable = true;
-    themeFile = "Dracula";
+    themeFile = "Catppuccin-Mocha";
     font = { name = "FiraMono Nerd Font"; };
     settings = {
       confirm_os_window_close = 0;
