@@ -21,5 +21,6 @@
     pulseaudio-ctl
     rhythmbox
     signal-desktop
+    sysstat # for tmux cpu
   ];
 }

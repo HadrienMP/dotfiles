@@ -1,8 +1,5 @@
 { config, pkgs, lib, ... }:
 {
-  home.packages = with pkgs; [
-    sysstat
-  ];
   programs.tmux = {
     enable = true;
     plugins = with pkgs.tmuxPlugins; [
