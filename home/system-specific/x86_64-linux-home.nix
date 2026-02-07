@@ -23,4 +23,7 @@
     signal-desktop
     sysstat # for tmux cpu
   ];
+
+
+  programs.ssh.matchBlocks."*".extraOptions.IdentityAgent = "~/.1password/agent.sock";
 }
