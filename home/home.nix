@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     btop
     cachix
+    deluge
     devbox
     ffmpeg_6
     fira-code
