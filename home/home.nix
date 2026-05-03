@@ -19,6 +19,7 @@
     inputs.bootstrap-kata.packages."${system}".bootstrap-kata
     inputs.zen-browser.packages."${system}".beta
     lsd
+    mise
     mob # Mob.sh
     neofetch
     nerd-fonts._0xproto

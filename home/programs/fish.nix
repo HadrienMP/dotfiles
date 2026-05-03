@@ -35,6 +35,7 @@
       fish_add_path $HOME"/.npm-packages/bin"
       fish_add_path $HOME"/.local/bin"
       zoxide init fish | source
+      mise activate fish | source
     '';
     shellAliases = {
       rm = "rm -i";
