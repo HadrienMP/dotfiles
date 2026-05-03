@@ -21,7 +21,7 @@
     lsd
     mise
     mob # Mob.sh
-    neofetch
+    fastfetch
     nerd-fonts._0xproto
     nerd-fonts.fira-mono
     oh-my-fish
