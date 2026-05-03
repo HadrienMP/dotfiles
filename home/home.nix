@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     btop
     cachix
+    colima
     deluge
     devbox
     ffmpeg_6
