@@ -7,9 +7,11 @@
     gnused
     lua54Packages.jsregexp
     nodePackages.typescript-language-server
+    nodejs
+    python313Packages.pynvim # for nvim-http
+    python313Packages.requests # for nvim-http
     ripgrep
     tree-sitter
-    nodejs
   ];
 
   programs.neovim = {
