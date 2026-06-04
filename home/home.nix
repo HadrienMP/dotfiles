@@ -9,9 +9,9 @@
   home.packages = with pkgs; [
     btop
     cachix
-    colima
     deluge
     devbox
+    docker
     fira-code
     fzf
     hugo
@@ -43,5 +43,9 @@
 
   home.shellAliases = {
     ll = "lsd -alh";
+  };
+
+  services.colima = {
+    enable = true;
   };
 }
