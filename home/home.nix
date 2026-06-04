@@ -12,7 +12,6 @@
     colima
     deluge
     devbox
-    ffmpeg_6
     fira-code
     fzf
     hugo
@@ -32,7 +31,9 @@
     tldr
     vscode
     xclip
+    yt-dlp
     zoxide
+    ffmpeg
   ];
 
   fonts.fontconfig.enable = true;
