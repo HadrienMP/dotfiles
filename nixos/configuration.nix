@@ -14,7 +14,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "akachat"; # Define your hostname.
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -71,7 +74,6 @@
   virtualisation.docker.enable = true;
 
   # Enable sound with pipewire.
-  # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -96,23 +98,14 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.h = {
+  users.users."h" = {
     isNormalUser = true;
     description = "Hadrien";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = "/home/h/.nix-profile/bin/fish";
     packages = with pkgs; [
-      firefox
-      gcc
-      git
-      # gnome-extension-manager
-      gnumake
       home-manager
       nix-index
-      sayonara
-      unzip
-      vim
-      wget
     ];
   };
 
@@ -122,10 +115,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     brightnessctl
     gnome-tweaks
+    gnumake
+    gcc
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -153,9 +149,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
-
-  nix.settings.experimental-features = "nix-command flakes";
+  system.stateVersion = "26.05"; # Did you read the comment?
 
   fonts = {
     enableDefaultPackages = true;
@@ -176,12 +170,8 @@
     automatic = true; dates = "weekly";
     options = "--delete-older-than 30d";
   };
-  # fileSystems."/nix" = {
-  #    device = "/dev/disk/by-label/nix";
-  #    fsType = "ext4";
-  #    neededForBoot = true;
-  #    options = [ "noatime" ];
-  #  };
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.udev.extraRules = ''
     # Rules for Oryx web flashing and live training
