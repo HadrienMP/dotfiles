@@ -119,6 +119,7 @@
   #  wget
     brightnessctl
     gnome-tweaks
+    gnomeExtensions.tactile
     gnumake
     gcc
     git
