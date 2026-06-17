@@ -32,6 +32,7 @@
     vscode
     xclip
     yt-dlp
+    zapzap #whatsapp client
     zoxide
     ffmpeg
   ];
