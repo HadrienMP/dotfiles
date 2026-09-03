@@ -9,18 +9,21 @@
   home.packages = with pkgs; [
     btop
     cachix
+    darktable
     deluge
     devbox
     docker
+    fastfetch
+    ffmpeg
     fira-code
     fzf
     hugo
     inputs.bootstrap-kata.packages."${system}".bootstrap-kata
     inputs.zen-browser.packages."${system}".beta
+    keymapp
     lsd
     mise
     mob # Mob.sh
-    fastfetch
     nerd-fonts._0xproto
     nerd-fonts.fira-mono
     oh-my-fish
@@ -34,7 +37,6 @@
     yt-dlp
     zapzap #whatsapp client
     zoxide
-    ffmpeg
   ];
 
   fonts.fontconfig.enable = true;

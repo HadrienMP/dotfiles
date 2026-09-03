@@ -15,7 +15,6 @@
     insomnia
     kooha
     libreoffice-fresh
-    logseq
     proton-vpn
     pulseaudio
     pulseaudio-ctl

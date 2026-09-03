@@ -19,9 +19,6 @@
       home-config = platform: home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           config.allowUnfree = true;
-          config.permittedInsecurePackages = [
-            "electron-27.3.11" # For logseq
-          ];
           system = platform;
         };
         modules = [
